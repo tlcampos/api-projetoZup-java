@@ -1,0 +1,53 @@
+package com.example.pessoa.apirest.controler;
+
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.pessoa.apirest.UnicidadeCPFException;
+import com.example.pessoa.apirest.UnicidadeEmailException;
+import com.example.pessoa.apirest.models.Pessoa;
+import com.example.pessoa.apirest.repository.PessoaRepository;
+import com.example.pessoa.apirest.util.UtilCommon;
+import com.example.pessoa.apirest.util.Constantes;
+
+@RestController
+@RequestMapping(value="/api")
+public class PessoaController {
+
+	@Autowired
+	PessoaRepository pessoaRepository;
+
+	@PostMapping("/pessoa")
+	public String salvaPessoa(@RequestBody Pessoa pessoa) throws Exception{
+		verificaDados(pessoa);
+		return "CPF não cadastrado pode cadastradar";
+	}
+
+	public String verificaDados(Pessoa pessoa) throws UnicidadeCPFException, UnicidadeEmailException{
+		Optional<Pessoa> pessoaCPF = pessoaRepository.findByCPF(pessoa.getCPF());
+
+		if(UtilCommon.cpfInvalido(pessoa.getCPF())){
+          
+		}
+
+		if(UtilCommon.EmailInvalido(pessoa.getEmail())) {
+			
+		}
+
+		if (pessoaCPF.isPresent()) {
+			throw new UnicidadeCPFException();
+		}
+
+		Optional<Pessoa> pessoaEmail = pessoaRepository.findByemail(pessoa.getEmail());
+		if (pessoaEmail.isPresent()) {
+			throw new UnicidadeEmailException();
+		}
+		return null;
+
+	}
+
+}

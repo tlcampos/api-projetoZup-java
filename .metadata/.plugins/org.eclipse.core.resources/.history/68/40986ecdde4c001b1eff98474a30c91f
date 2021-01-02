@@ -1,0 +1,8 @@
+package com.example.pessoa.apirest.util;
+
+public class Constantes {
+	
+	public static String erroCPFJaCadastrado = "CPF informado já possui cadatro : ";
+	public static String erroEmailJaCadastrado = "E-mail informado já possui cadatro: ";
+	
+}

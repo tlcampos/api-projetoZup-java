@@ -1,0 +1,5 @@
+package com.example.pessoa.apirest.resources;
+
+public class Produto {
+
+}

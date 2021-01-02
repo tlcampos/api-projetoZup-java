@@ -1,0 +1,5 @@
+package com.example.pessoa.apirest.repository;
+
+public interface PessoaRepository {
+
+}

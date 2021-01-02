@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.pessoa.apirest.resources.Produto&apos; to &apos;PessoaResource&apos;&#x0D;&#x0A;- Original project: &apos;apirest&apos;&#x0D;&#x0A;- Original element: &apos;com.example.pessoa.apirest.resources.Produto&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.pessoa.apirest.resources.PessoaResource&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Produto&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.pessoa.apirest.resources{Produto.java[Produto" matchStrategy="1" name="PessoaResource" qualified="false" references="true" similarDeclarations="false" stamp="1609122004622" textual="false" version="1.0"/>
+</session>

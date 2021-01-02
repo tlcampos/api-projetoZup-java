@@ -1,0 +1,7 @@
+package com.example.pessoa.apirest;
+
+public class InvalidoDataException extends Exception {
+	public InvalidoDataException() {
+		super("");
+	}
+}

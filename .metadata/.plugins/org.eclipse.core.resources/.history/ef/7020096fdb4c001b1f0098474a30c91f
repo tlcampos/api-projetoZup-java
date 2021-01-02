@@ -1,0 +1,12 @@
+package com.example.pessoa.apirest;
+
+public class InvalidoCPFException {
+	
+	public class InvalidoCPFException extends Exception {
+		public InvalidoCPFException() {
+			super(Constantes.erroDataInvalida);
+		}
+	}
+
+
+}

@@ -1,0 +1,39 @@
+package com.example.pessoa.apirest.resources;
+
+
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.example.pessoa.apirest.models.Pessoa;
+import com.example.pessoa.apirest.repository.PessoaRepository;
+
+
+@RestController
+@RequestMapping(value="/api")
+public class PessoaResource {
+
+	@Autowired
+	PessoaRepository pessoaRepository;
+
+	@GetMapping("/pessoas")
+	public List<Pessoa> listaPessoas(){
+		return pessoaRepository.findAll();
+	}
+	
+	@PostMapping("/pessoa")
+	public String  salvaPessoa(@RequestBody Pessoa pessoa){
+		Optional<Pessoa> optionalPessoa = pessoaRepository.findByCPF(pessoa.getCPF());
+		
+		if (optionalPessoa.isPresent()) {
+			// Retorna  quejá existe um cadastro para o CPF informado
+			return "CPF informado já possui cadatro no nosso Banco: "+pessoa.getNome();
+		}
+		// Salva o usuário
+		return "CPF não cadastrado pode cadastradar";
+	}
+}

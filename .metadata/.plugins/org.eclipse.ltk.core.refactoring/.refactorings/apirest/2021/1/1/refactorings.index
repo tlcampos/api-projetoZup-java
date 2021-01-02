@@ -1,0 +1,9 @@
+1609579682350	Rename package 'com.example.pessoa.apirest.resources'
+1609581273613	Delete element
+1609581727955	Rename type 'PessoaResource'
+1609579279037	Rename type 'Util'
+1609579539187	Rename type 'Contantes'
+1609581596377	Rename type 'FormatoDataException'
+1609578545653	Delete element
+1609578852380	Rename type 'CPFInvalidoException'
+1609579351889	Delete element

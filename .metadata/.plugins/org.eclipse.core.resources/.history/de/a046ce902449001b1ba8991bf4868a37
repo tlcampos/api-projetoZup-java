@@ -1,0 +1,77 @@
+package com.example.pessoa.apirest.models;
+
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+//import java.util.Date;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+//Entidade Pessoa
+
+@Entity
+@Table(name="TB_PESSOA")
+public class Pessoa implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
+	private String nome;
+	
+	private String email;
+	
+	private String CPF;
+	
+	private String dtNascimento;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+//TODO: Tratar string para Date
+	public String getDtNascimento() {
+		return dtNascimento;
+	}
+
+	public void setDtNascimento(String dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+	
+	
+
+}

@@ -1,0 +1,7 @@
+spring.jpa.properties.hibernate.jdbc.lob.con_contextual_creation=true
+
+#Banco Local  - ZupBank
+spring.datasource.url=jdbc:postgresql://192.168.0.8/ZupBank
+spring.datasource.username=postgres
+spring.datasource.data-password=540269
+spring.jpa.hibernate.ddl-auto=update

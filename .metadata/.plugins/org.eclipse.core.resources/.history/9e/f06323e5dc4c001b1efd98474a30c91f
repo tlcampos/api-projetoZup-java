@@ -1,0 +1,7 @@
+package com.example.pessoa.apirest.util;
+
+public class Constantes {
+	
+	public static String erroCPFJaCadastrado = "CPF informado já possui cadatro no nosso Banco: ";
+
+}

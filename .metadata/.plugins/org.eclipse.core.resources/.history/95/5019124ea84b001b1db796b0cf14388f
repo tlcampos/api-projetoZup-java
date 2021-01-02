@@ -1,0 +1,12 @@
+package com.example.pessoa.apirest.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.pessoa.apirest.models.Pessoa;
+
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
+
+	public Optional<Pessoa> findByCpf(Pessoa pessoa);
+}
