@@ -31,7 +31,7 @@ public class UtilCommon {
 		return false;
 	}
 
-	public static boolean cpfInvalido(String CPF) {
+	public static boolean cpfValido(String CPF) {
 
 		if (CPF.equals("00000000000") ||
 				CPF.equals("11111111111") ||
