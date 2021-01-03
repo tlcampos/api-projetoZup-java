@@ -36,7 +36,7 @@ public class PessoaController {
 	public void verificaDados(Pessoa pessoa) throws UnicidadeCPFException, UnicidadeEmailException, InvalidoDataException, InvalidoCPFException, InvalidoEmailException{
 		Optional<Pessoa> pessoaCPF = pessoaRepository.findByCPF(pessoa.getCPF());
 
-		if(UtilCommon.cpfInvalido(pessoa.getCPF())){
+		if(!UtilCommon.cpfValido(pessoa.getCPF())){
 			throw new InvalidoCPFException();
 
 		}
